@@ -1,0 +1,27 @@
+
+<mat-toolbar>
+    <!-- <mat-card><h1 style="text-align: center;">Simple Todos List</h1></mat-card><br> -->
+    <mat-toolbar-row>
+        <span>Simple Todos List</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button> <mat-icon class="example-icon" aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+        </button>
+        <button mat-icon-button> 
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example settings icon">settings</mat-icon>
+    </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+<mat-nav-list>
+    <a mat-list-item routerLink='ToDo'><mat-icon>dashboard</mat-icon> Dashboard</a>
+    <a mat-list-item routerLink='Help'><mat-icon>help</mat-icon> Help</a>
+</mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <p style="height:88vh;background-color: cadetblue;" >
+            <!-- <app-todo></app-todo> -->
+            <router-outlet></router-outlet>
+        </p>
+    </mat-sidenav-content>
+</mat-sidenav-container>
